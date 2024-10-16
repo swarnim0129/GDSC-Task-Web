@@ -10,6 +10,63 @@
 
 
 </head>
+<style>
+
+    @keyframes appear {
+        from{
+            opacity: 0;
+            scale: 0.5;
+        }
+        to{
+            opacity: 1;
+            scale: 1;
+        }
+        
+    }
+
+    @keyframes slide-fl {
+        from{
+            opacity: 0;
+            transform: translateX(-150px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        
+    }
+
+    @keyframes slide-fr {
+        from{
+            opacity: 0;
+            transform: translateX(150px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+        
+    }
+
+    .ablck{
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+    }
+
+    .slidefromleft{
+        animation: slide-fl linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+
+    }
+    .slidefromright{
+        animation: slide-fr linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+
+    }
+</style>
 
 <body class="">
 
@@ -58,7 +115,7 @@
                 <button
                     class="w-full flex mt-4 items-center hover:bg-gray-100 rounded-xl px-6 py-4 hover:border-gray-800">
                     <img src="assets/asset 1.svg" alt="">
-                    <span class="px-2">Electron Developers</span>
+                    <span class="px-2">Check Out</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
             </div>
@@ -341,12 +398,12 @@
 
             <!-- step by step -->
             <div id="steps" class="flex flex-col gap-7 h-20 mt-16 mx-auto px-6 mb-10 py-10 max-w-8xl lg:px-8 ">
-                <h2 class="text-5xl font-semibold font-poppins flex items-center justify-center ml-10">VISION</h2>
-                <p class="text-xl mt-4 flex justify-center items-center mb-14 sm:text-2xl sm:my-20 sm:mt-8">Meet and
+                <h2 class="text-5xl font-semibold font-poppins flex items-center justify-center ml-10 ablck">VISION</h2>
+                <p class="text-xl mt-4 flex justify-center items-center mb-14 sm:text-2xl sm:my-20 sm:mt-8 ablck">Meet and
                     learn with other developers and build solutions for
                     communities with Google technology.</p>
-                <div class="group shadow-md rounded-xl border py-12 px-8 flex flex-col lg:flex-row lg:mx-16 mb-10">
-                    <div class="flex flex-col  gap-6 lg:w-1/2">
+                <div class="group shadow-md rounded-xl border py-12 px-8 flex flex-col lg:flex-row lg:mx-16 mb-10 ablck ">
+                    <div class="flex flex-col  gap-6 lg:w-1/2 ">
                         <div
                             class="font-poppins font-medium rounded-lg border border-yellow-300 w-fit py-1 px-3 bg-yellow-100 text-yellow-800 mb-8">
                             Study Jams</div>
@@ -392,7 +449,7 @@
                         <img class="rounded-2xl shadow-md w-[20px] h-[20px] " src="ANew/asset 4.jpeg" alt="">
                     </div>
                 </div>
-                <div class="group shadow-md rounded-xl border py-12 px-8 flex flex-col lg:flex-row lg:mx-16 mb-10">
+                <div class="group shadow-md rounded-xl border py-12 px-8 flex flex-col lg:flex-row lg:mx-16 mb-10 slidefromleft">
                     <div class="flex flex-col  gap-6 lg:w-1/2">
                         <div
                             class="font-poppins font-medium rounded-lg border border-yellow-300 w-fit py-1 px-3 bg-yellow-100 text-yellow-800 mb-8">
@@ -437,7 +494,7 @@
                         <img class="rounded-lg duration-200" src="ANew/asset 5.jpeg" alt="">
                     </div>
                 </div>
-                <div class="group shadow-md rounded-xl border py-12 px-8 flex flex-col lg:flex-row lg:mx-16 mb-10">
+                <div class="group shadow-md rounded-xl border py-12 px-8 flex flex-col lg:flex-row lg:mx-16 mb-10 slidefromright">
                     <div class="flex flex-col  gap-6 lg:w-1/2">
                         <div
                             class="font-poppins font-medium rounded-lg border border-yellow-300 w-fit py-1 px-3 bg-yellow-100 text-yellow-800 mb-8">
@@ -486,7 +543,7 @@
                 </div>
 
                 <div class="lg:mx-16 ">
-                    <div class=" border shadow-md border-gray overflow-hidden flex justify-center p-4 rounded-lg mb-12">
+                    <div class=" border shadow-md border-gray overflow-hidden flex justify-center p-4 rounded-lg mb-12 ablck">
                         <div id="line4" class=" flex gap-8 items-center py-6 translate-x-96">
                             <span>•</span>
                             <h3 class=" whitespace-nowrap font-semibold text-2xl my-0">Connect</h3>
@@ -528,13 +585,13 @@
                     </div>
 
                 </div>
-                <h2 class="text-5xl sm:font-semibold flex flex-col  lg:mx-16">What do we do</h2><br>
+                <h2 class="text-5xl sm:font-semibold flex flex-col ablck lg:mx-16">What do we do</h2><br>
                 <div id="bento-grid" class="pb-12  flex flex-col lg:flex-row lg:mx-16 gap-6 sm-flex-row">
 
                     <div id="grid-container" class="flex flex-col gap-6 lg:grid lg:grid-cols-3"
                         style="grid-auto-rows: 96px;">
                         <div
-                            class="shadow-md row-start-1 row-end-3 rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
+                            class="shadow-md slidefromleft row-start-1 row-end-3 rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
                             <div
                                 class="rounded-2xl bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 w-full h-full flex flex-col items-center p-6 hover:shadow-lg">
                                 <h2 class="text-xl font-poppins font-semibold ">App Development</h2>
@@ -542,7 +599,7 @@
                             </div>
                         </div>
                         <div
-                            class=" shadow-md row-start-1 row-end-4 rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
+                            class=" shadow-md row-start-1 row-end-4 ablck rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
                             <div
                                 class=" rounded-2xl bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 w-full h-full flex flex-col items-center p-6 hover:shadow-lg">
                                 <h2 class="text-xl font-poppins font-semibold ">Web Development</h2>
@@ -553,7 +610,7 @@
                             </div>
                         </div>
                         <div
-                            class="shadow-md row-start-1 row-end-3 rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
+                            class="shadow-md row-start-1 row-end-3 slidefromright rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
                             <div
                                 class="rounded-2xl bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 w-full h-full flex flex-col items-center p-6 hover:shadow-lg">
                                 <h2 class="text-xl font-poppins font-semibold ">Machine Learning</h2>
@@ -561,9 +618,9 @@
                             </div>
                         </div>
                         <div
-                            class="shadow-md row-start-3 row-end-6 rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
+                            class="shadow-md slidefromleft row-start-3 row-end-6 rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
                             <div
-                                class="rounded-2xl bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 w-full h-full flex flex-col items-center p-6 hover:shadow-lg">
+                                class="rounded-2xl  bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 w-full h-full flex flex-col items-center p-6 hover:shadow-lg">
                                 <h2 class="text-xl font-poppins font-semibold ">Marketing</h2>
                                 <h3 class="font-poppins font-light text-center">We’ll ensure the underlying browser is
                                     up to date and deliver performance improvements, security patches, & additional
@@ -573,7 +630,7 @@
                             </div>
                         </div>
                         <div
-                            class="shadow-md row-start-4 row-end-6 rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
+                            class="shadow-md row-start-4 row-end-6 rounded-2xl ablck bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
                             <div
                                 class="rounded-2xl bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 w-full h-full flex flex-col items-center p-6 hover:shadow-lg">
                                 <h2 class="text-xl font-poppins font-semibold ">Creatives</h2>
@@ -581,7 +638,7 @@
                             </div>
                         </div>
                         <div
-                            class="shadow-md row-start-3 row-end-6 rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
+                            class="shadow-md row-start-3 row-end-6 slidefromright rounded-2xl bg-slate-100 hover:bg-gradient-to-br group hover:from-red-200 hover:via-purple-200 hover:to-yellow-200 p-[1px] ">
                             <div
                                 class="rounded-2xl bg-white group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50 w-full h-full flex flex-col items-center p-6 hover:shadow-lg">
                                 <h2 class="text-xl font-poppins font-semibold ">Publicity</h2>
